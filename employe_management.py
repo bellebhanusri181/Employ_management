@@ -1,10 +1,6 @@
 import sqlite3
-
-# Connect to database (creates file if not exists)
 conn = sqlite3.connect("employees.db")
 cursor = conn.cursor()
-
-# Create table if not exists
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS employees (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -64,3 +60,4 @@ while True:
         print("Invalid choice!\n")
 
 conn.close()
+
